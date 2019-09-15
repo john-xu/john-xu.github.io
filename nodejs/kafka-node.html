@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>kafka-node介绍 | 慕远</title>
+    <meta name="description" content="慕远的小码头">
+    <link rel="icon" href="/logo.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.e80954a9.css" as="style"><link rel="preload" href="/assets/js/app.42c02f42.js" as="script"><link rel="preload" href="/assets/js/2.4cdc67cc.js" as="script"><link rel="preload" href="/assets/js/12.507dc92e.js" as="script"><link rel="prefetch" href="/assets/js/10.98c067d4.js"><link rel="prefetch" href="/assets/js/11.d8bf3a75.js"><link rel="prefetch" href="/assets/js/13.813b8199.js"><link rel="prefetch" href="/assets/js/14.175bb31b.js"><link rel="prefetch" href="/assets/js/15.85ca6733.js"><link rel="prefetch" href="/assets/js/16.04f691a6.js"><link rel="prefetch" href="/assets/js/17.2e7db2ea.js"><link rel="prefetch" href="/assets/js/3.dc92d23e.js"><link rel="prefetch" href="/assets/js/4.41c949ab.js"><link rel="prefetch" href="/assets/js/5.29b0e1b0.js"><link rel="prefetch" href="/assets/js/6.aa4f652f.js"><link rel="prefetch" href="/assets/js/7.d80fab21.js"><link rel="prefetch" href="/assets/js/8.03662a82.js"><link rel="prefetch" href="/assets/js/9.4ff11b21.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e80954a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">慕远</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ES6/" class="nav-link">ES6</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link router-link-active">Node.js</a></div><div class="nav-item"><a href="/docker/" class="nav-link">Docker</a></div><div class="nav-item"><a href="/server/" class="nav-link">服务器</a></div> <a href="https://github.com/john-xu/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ES6/" class="nav-link">ES6</a></div><div class="nav-item"><a href="/nodejs/" class="nav-link router-link-active">Node.js</a></div><div class="nav-item"><a href="/docker/" class="nav-link">Docker</a></div><div class="nav-item"><a href="/server/" class="nav-link">服务器</a></div> <a href="https://github.com/john-xu/myblog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    查看源码
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><a href="/nodejs/" class="sidebar-link">nodejs</a></li><li><a href="/nodejs/kafka-node.html" class="active sidebar-link">kafka-node的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/nodejs/kafka-node.html#kafka-node介绍" class="sidebar-link">kafka-node介绍</a></li><li class="sidebar-sub-header"><a href="/nodejs/kafka-node.html#代码案例" class="sidebar-link">代码案例</a></li></ul></li><li><a href="/nodejs/pm2.html" class="sidebar-link">pm2的使用</a></li><li><a href="/nodejs/express-session-redis.html" class="sidebar-link">使用redis存储express的session</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="kafka-node介绍"><a href="#kafka-node介绍" aria-hidden="true" class="header-anchor">#</a> kafka-node介绍</h2> <p><a href="https://www.npmjs.com/package/kafka-node" target="_blank" rel="noopener noreferrer">kafka-node<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>是node的一个kafka client，可方便的使用kafka</p> <h2 id="代码案例"><a href="#代码案例" aria-hidden="true" class="header-anchor">#</a> 代码案例</h2> <p>以下为kafka-node的Producer的简单使用案例</p> <h3 id="producer定义"><a href="#producer定义" aria-hidden="true" class="header-anchor">#</a> Producer定义</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> kafka <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'kafka-node'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    Producer <span class="token operator">=</span> kafka<span class="token punctuation">.</span>Producer<span class="token punctuation">,</span>
+    KeyedMessage <span class="token operator">=</span> kafka<span class="token punctuation">.</span>KeyedMessage<span class="token punctuation">,</span>
+    client <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">kafka<span class="token punctuation">.</span>KafkaClient</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        kafkaHost<span class="token punctuation">:</span><span class="token string">'localhost:9092'</span>  <span class="token comment">//kafkaHost为host或者是以分号','连接的broker列表</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    producer <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Producer</span><span class="token punctuation">(</span>client<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * kafka的producer方法
+ * @param  {Array} payloads 
+ *      [
+ *          { topic: 'test', messages: 'this is first', partition: 0 },
+ *          { topic: 'test', messages: 'this is second' }
+ *      ];
+ * @return {Promise}          
+ */</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span>  <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">payloads</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span>reject</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        producer<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'ready'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            producer<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span>payloads<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">err<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'send error'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+                    <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'ok'</span><span class="token punctuation">,</span> data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token function">resolve</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        producer<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+            <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="producer使用"><a href="#producer使用" aria-hidden="true" class="header-anchor">#</a> Producer使用</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> kafkaLog<span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./kafka.js'</span><span class="token punctuation">)</span>
+
+<span class="token function">kafkaLog</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>topic<span class="token punctuation">:</span> <span class="token string">'test'</span><span class="token punctuation">,</span>messages<span class="token punctuation">:</span> <span class="token string">'this is third'</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>topic<span class="token punctuation">:</span><span class="token string">'test'</span><span class="token punctuation">,</span>messages<span class="token punctuation">:</span><span class="token string">'this is forth'</span><span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">data</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'ok'</span><span class="token punctuation">,</span>data<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">.</span><span class="token function">catch</span><span class="token punctuation">(</span><span class="token parameter">err</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    consol<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'error'</span><span class="token punctuation">,</span> err<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/john-xu/myblog/edit/master/nodejs/kafka-node.md" target="_blank" rel="noopener noreferrer">帮助我们改善此页面！</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">最后更新于: </span> <span class="time">6/16/2019, 5:01:31 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/nodejs/" class="prev router-link-active">
+          nodejs
+        </a></span> <span class="next"><a href="/nodejs/pm2.html">
+          pm2的使用
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.42c02f42.js" defer></script><script src="/assets/js/2.4cdc67cc.js" defer></script><script src="/assets/js/12.507dc92e.js" defer></script>
+  </body>
+</html>
